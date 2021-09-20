@@ -21,7 +21,7 @@
 <body id="body">
     <div class="wrapper">
         <div class="container">
-            <div class="center-section">
+            <article class="center-section">
                 <header class="header">
                     <nav class="navigation">
                         <ul class="navigation-menu">
@@ -68,7 +68,7 @@
                         <div class="about__content main__content">
                             My name is Steshenko Dmitry. I’m 19. Now i’m studying at 
                             the Belarusian State University of Informatics and 
-                            Radioelectronics (BSUIR). 
+                            Radioelectronics (BSUIR). I've been studying js development for six months now.
                         </div>
                     </section>
                     <section class="main__section">
@@ -103,12 +103,12 @@
     let n = Math.sqrt(temp.length);
     let arr = [];
     
-    for(let i = 0; i < n; i++) {
+    for(let i = 0; i &lt; n; i++) {
     arr[i] = [];
     }
     
-    for(let i = 0, k = 0; i < n; i++) {
-    for(let j = 0; j < n; j++, k++) {
+    for(let i = 0, k = 0; i &lt; n; i++) {
+    for(let j = 0; j &lt; n; j++, k++) {
       if(temp[k] != '\n') {
         arr[i][j] = temp[k];
       }
@@ -139,7 +139,7 @@
     let sib = getSiblings(x, y);
     
     if(sib.length > 0) {
-      for(let i = 0; i < sib.length; i++) {
+      for(let i = 0; i &lt; sib.length; i++) {
         let current = sib[i];
         let isSolved = current.x === n-1
                     && current.y === n-1;
@@ -219,9 +219,9 @@
                         </h2>
                         <div class="projects__content main__content">
                             <a class="projects__calculator projects__item" href="https://stesho.github.io/calculator/">
-                                <div class="projects__title">
+                                <h3 class="projects__title">
                                     Engineering calculator
-                                </div>
+                                </h3>
                                 <div class="projects__year">
                                     2021
                                 </div>
@@ -232,9 +232,9 @@
                                 </div>            
                             </a>
                             <a class="projects__weather-forecast projects__item" href="https://stesho.github.io/weather_forecast/">
-                                <div class="projects__title">
+                                <h3 class="projects__title">
                                     Weather forecast
-                                </div>
+                                </h3>
                                 <div class="projects__year">
                                     2021
                                 </div>
@@ -247,7 +247,7 @@
                         </div>
                     </section>
                 </main>
-            </div>
+            </article>
             <aside class="side-section">
                 <div class="side-section__photo_wrapper">
                     <img class="side-section__photo" src="./img/Photo.png" alt="My photo">
