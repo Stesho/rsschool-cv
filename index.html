@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/shades-of-purple.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/icons-font.css">
+    <title>Curriculum vitae</title>
+</head>
+<body id="body">
+    <div class="wrapper">
+        <div class="container">
+            <div class="center-section">
+                <header class="header">
+                    <nav class="navigation">
+                        <ul class="navigation-menu">
+                            <li class="navigation-menu__item"><a class="navigation-menu__link" href="#about__caption" onclick="HideBurgerMenu()">Summary</a></li>
+                            <li class="navigation-menu__item"><a class="navigation-menu__link" href="#skills__caption" onclick="HideBurgerMenu()">Skills</a></li>
+                            <li class="navigation-menu__item"><a class="navigation-menu__link" href="#code__caption" onclick="HideBurgerMenu()">Code</a></li>
+                            <li class="navigation-menu__item"><a class="navigation-menu__link" href="#education__caption" onclick="HideBurgerMenu()">Education</a></li>
+                            <li class="navigation-menu__item"><a class="navigation-menu__link" href="#projects__caption" onclick="HideBurgerMenu()">Projects</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="burger">
+                        <ul class="burger-menu">
+                            <li class="burger-menu__item"><a class="burger-menu__link" href="#about__caption" onclick="HideBurgerMenu()">Summary</a></li>
+                            <li class="burger-menu__item"><a class="burger-menu__link" href="#skills__caption" onclick="HideBurgerMenu()">Skills</a></li>
+                            <li class="burger-menu__item"><a class="burger-menu__link" href="#code__caption" onclick="HideBurgerMenu()">Code</a></li>
+                            <li class="burger-menu__item"><a class="burger-menu__link" href="#education__caption" onclick="HideBurgerMenu()">Education</a></li>
+                            <li class="burger-menu__item"><a class="burger-menu__link" href="#projects__caption" onclick="HideBurgerMenu()">Projects</a></li>
+                        </ul>
+                    </nav>
+                    <a href="javascript:void(0);" class="burger-menu__button" onclick="ShowBurgerMenu()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </header>
+    
+                <main class="main">
+                    <section class="main__section">
+                        <div class="title">
+                            <div class="title__wrapper">
+                                <h1 class="title__caption main__caption">
+                                    Hello, i’m Dmitry,<br>
+                                    novice JS developer
+                                </h1>
+                                <div class="title__line"></div>
+                            </div>
+                            <div class="side-section__photo_wrapper title__photo">
+                                <img class="side-section__photo" src="./img/Photo.png" alt="My photo">
+                            </div>
+                        </div>
+                    </section>
+                    <section class="main__section">
+                        <h2 id="about__caption" class="about__caption main__caption">
+                            some information about me  
+                        </h2>
+                        <div class="about__content main__content">
+                            My name is Steshenko Dmitry. I’m 19. Now i’m studying at 
+                            the Belarusian State University of Informatics and 
+                            Radioelectronics (BSUIR). I've been studying js development for six months now.
+                        </div>
+                    </section>
+                    <section class="main__section">
+                        <h2 id="skills__caption" class="skills__caption main__caption">
+                            my technical skills  
+                        </h2>
+                        <div class="skills__content main__content">
+                            <ul class="skills__list">
+                                <li class="skills__item">Basics of HTML, CSS</li>
+                                <li class="skills__item">Experience in website layout</li>
+                                <li class="skills__item">JavaScript programming experience</li>
+                                <li class="skills__item">Hands-on GIT skills</li>
+                                <li class="skills__item">Ability to work in figma</li>
+                                <li class="skills__item">English: B1(Pre-Intermediate)</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="main__section">
+                        <h2 id="code__caption" class="code__caption main__caption">
+                            code example
+                        </h2>
+                        <div class="code__content main__content">
+                            <div class="code__description">
+                                This is an example of the problem solution code presented from the
+                                <a class="codewars-link" href="https://www.codewars.com/kata/5765870e190b1472ec0022a2">CodeWars</a> website.
+                            </div>
+                            <div class="code__example_wrapper">
+    <pre><code class="code__example">function pathFinder(maze){
+    let temp = maze.split('').filter(el => 
+                  el === '.' || el === 'W');
+                    
+    let n = Math.sqrt(temp.length);
+    let arr = [];
+    
+    for(let i = 0; i &lt; n; i++) {
+    arr[i] = [];
+    }
+    
+    for(let i = 0, k = 0; i &lt; n; i++) {
+    for(let j = 0; j &lt; n; j++, k++) {
+      if(temp[k] != '\n') {
+        arr[i][j] = temp[k];
+      }
+    }
+    }
+    
+    function getSiblings (x, y) {
+    let siblings = [];
+    
+    if(arr[x+1] !== undefined) {
+      siblings.push({x:x+1, y:y, val:arr[x+1][y]});
+    }
+    if(arr[x-1] !== undefined) {
+      siblings.push({x:x-1, y:y, val:arr[x-1][y]});
+    }
+    if(arr[x][y+1] !== undefined) {
+      siblings.push({x:x, y:y+1, val:arr[x][y+1]});
+    }
+    if(arr[x][y-1] !== undefined) {
+      siblings.push({x:x, y:y-1, val:arr[x][y-1]});
+    }
+    
+    return siblings.filter(el => el.val === '.');
+    }
+    
+    let func = (x, y) => {
+    arr[x][y] = 'x';
+    let sib = getSiblings(x, y);
+    
+    if(sib.length > 0) {
+      for(let i = 0; i &lt; sib.length; i++) {
+        let current = sib[i];
+        let isSolved = current.x === n-1
+                    && current.y === n-1;
+    
+        let notVisited = 
+            arr[current.x][current.y] !== 'x'; 
+    
+        if(isSolved || (notVisited && 
+                        func(current.x, current.y))){
+            return true;
+        }
+      }
+    }
+    return false;
+    }
+    
+    return func(0, 0);
+    }</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="main__section">
+                        <h2 id="education__caption" class="education__caption main__caption">
+                            my education history
+                        </h2>
+                        <div class="education__content main__content">
+                            <div class="education__item">
+                                <div class="education__years">
+                                    2021-now
+                                </div>
+                                <div class="education__line_wrapper">
+                                    <div class="education__line"></div>
+                                </div>
+                                <div class="education__courses">
+                                    Rolling Scopes School
+                                </div>
+                            </div>
+                            <div class="education__item">
+                                <div class="education__years">
+                                    2020-now
+                                </div>
+                                <div class="education__line_wrapper">
+                                    <div class="education__line"></div>
+                                </div>
+                                <div class="education__courses">
+                                    BSUIR. Faculty of Engineering and Economics.
+                                    On speciality Information systems and technologies 
+                                </div>
+                            </div>
+                            <div class="education__item">
+                                <div class="education__years">
+                                    2018-2020
+                                </div>
+                                <div class="education__line_wrapper">
+                                    <div class="education__line"></div>
+                                </div>
+                                <div class="education__courses">
+                                    Self-study C++, .NET, C#
+                                </div>
+                            </div>
+                            <div class="education__item">
+                                <div class="education__years">
+                                    2019
+                                </div>
+                                <div class="education__line_wrapper">
+                                    <div class="education__line"></div>
+                                </div>
+                                <div class="education__courses">
+                                    Graduated from Gymnasium
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="main__section">
+                        <h2 id="projects__caption" class="projects__caption main__caption">
+                            sample projects
+                        </h2>
+                        <div class="projects__content main__content">
+                            <a class="projects__calculator projects__item" href="https://stesho.github.io/calculator/" target="_blank">
+                                <h3 class="projects__title">
+                                    Engineering calculator
+                                </h3>
+                                <div class="projects__year">
+                                    2021
+                                </div>
+                                <div class="projects__description">
+                                    That is one of my first projects. There i used
+                                    the function which get a string expression and 
+                                    calculate it. 
+                                </div>            
+                            </a>
+                            <a class="projects__weather-forecast projects__item" href="https://stesho.github.io/weather_forecast/" target="_blank">
+                                <h3 class="projects__title">
+                                    Weather forecast
+                                </h3>
+                                <div class="projects__year">
+                                    2021
+                                </div>
+                                <div class="projects__description">
+                                    This website can get your location and show the weather forecast 
+                                    in your sity. So, if don't want to provide your coordinates, you
+                                    may use the input field to see the weather in any city. 
+                                </div>            
+                            </a>
+                        </div>
+                    </section>
+                </main>
+            </div>
+            <aside class="side-section">
+                <div class="side-section__photo_wrapper">
+                    <img class="side-section__photo" src="./img/Photo.png" alt="My photo">
+                </div>
+                <div class="side-section__contacts_wrapper">
+                    <ul class="side-section__contacts">
+                        <li class="side-section__contacts_item">
+                            <a class="contacts__link" href="https://vk.com/dimasteshenko">
+                                <span class="contacts__icon icon-vk"></span>@dimasteshenko
+                            </a>
+                        </li>
+                        <li class="side-section__contacts_item">
+                            <a class="contacts__link" href="https://github.com/Stesho">
+                                <span class="contacts__icon icon-github"></span>@Stesho
+                            </a>
+                        </li>
+                        <li class="side-section__contacts_item">
+                            <a class="contacts__link" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNrdNmTKGhCzqxbnKkTvDpkKwDptLGzDfDcSqcMDcfxTTzsJXQTLgDWgfpzRJcDjSQZpdq">
+                                <span class="contacts__icon icon-mail"></span>3301297@gmail.com
+                            </a>
+                        </li>
+                        <li class="side-section__contacts_item">
+                            <a class="contacts__link" href="https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9-%D1%81%D1%82%D0%B5%D1%88%D0%B5%D0%BD%D0%BA%D0%BE-696203215/">
+                                <span class="contacts__icon icon-linkedin"></span>@dimasteshenko
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        <footer class="footer">
+            <div class="footer__links">
+                <a class="footer__icon icon-vk" href="https://vk.com/dimasteshenko"></a>
+                <a class="footer__icon icon-github" href="https://github.com/Stesho"></a>
+                <a href="https://rs.school/js/"><img class="footer__rs-school" src="./img/rs_school_js.svg" alt="Rolling Scopes logo"></a>
+                <a class="footer__icon icon-mail" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNrdNmTKGhCzqxbnKkTvDpkKwDptLGzDfDcSqcMDcfxTTzsJXQTLgDWgfpzRJcDjSQZpdq"></a>
+                <a class="footer__icon icon-linkedin" href="https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9-%D1%81%D1%82%D0%B5%D1%88%D0%B5%D0%BD%D0%BA%D0%BE-696203215/"></a>
+            </div>
+            <div class="footer__author">
+                &#169;Steshenko Dmitry, 2021
+            </div>
+        </footer>
+    </div>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
