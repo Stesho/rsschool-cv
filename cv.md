@@ -37,4 +37,15 @@ function recycle(array) {
 }
 ```
 
+## Experience
+*****
+*_2019-2021_:C, C++, C#, self-study, pet projects
+*_2021_:Rolling Scopes School
 
+## Education
+*****
+_2020-now_:Belarusian State University of Informatics and Radioelectronics (BSUIR)
+
+## Languages
+*Russian(Native)
+*English(B1)
